@@ -1,4 +1,9 @@
- This project aims to give students hands-on experience in designing and implementing a Web application on their own.
+http://webapps.cse.unsw.edu.au/webcms2/course/index.php?cid=2445
+
+
+
+
+This project aims to give students hands-on experience in designing and implementing a Web application on their own.
 
 In recent years, researchers in academia have begun to generate an increasing amount of data in the course of their experimetns and observations. This data is of interest to other researchers for analysis, verification, and for building their effort on prior work in the field. Legislation also requires Universities to comply with rules that dictate retaining data for a number of years after a publication has appeared in a journal.
 
