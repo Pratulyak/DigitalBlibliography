@@ -12,7 +12,7 @@ public class Record {
 	private long isbn;
 	private String ee;
 	
-	public Record(String title,String publisher,int year,long pages,long isbn,String ee,String type){
+	public Record(String title,String publisher,int year,long pages,long isbn,String ee,String type,String author){
 		this.Title = title;
 		this.publisher = publisher;
 		this.year = year;
@@ -20,8 +20,11 @@ public class Record {
 		this.isbn = isbn;
 		this.ee = ee;
 		this.type =type; 
+		this.addAuthors(s);
 	}
-
+	public void addAuthors(String s){
+		this.Authors.add(s);
+	}
 	public List<String> getAuthors() {
 		return Authors;
 	}

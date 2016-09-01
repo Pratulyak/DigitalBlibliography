@@ -40,18 +40,28 @@ public class Frontpage extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub		
 		try {
-			File newFile = new File("dblp.xml");
+			File newFile = new File("/home/pratulyak/workspace/DigitalBibliographicalLibrary/WebContent/WEB-INF/lib/dblp.xml");
 			DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
 			domFactory.setValidating(true);
 			DocumentBuilder builder = domFactory.newDocumentBuilder();
-			Document docu = builder.parse("dblp.xml");
+			Document docu = builder.parse(newFile);
+			this.handleDoc(docu);
 		} catch (SAXException | IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public void handleDoc(Document doc){
+		int i = 0;
+		for(i=0;i<20000;i++){
+			String title = doc.getElementsByTagName("title").item(i).getTextContent();
+			String author = doc.getElementsByTagName("author").item(i).getTextContent();
+			int pages = Integer.parseInt(doc.getElementsByTagName("pages").item(i).getTextContent());
+			int year = Integer.parseInt(doc.getElementsByTagName("year").item(i).getTextContent());
+			
+		}
 		
+		/*System.out.println(title+ author +" this is working mate");*///System.out.println(i);
 	}
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -96,12 +106,8 @@ public class Frontpage extends HttpServlet {
 	}
 
 	public String searchForFile(HttpServletRequest req) {
-		String testing = "frontpage.jsp";
+		String testing = "searchResult.jsp";
 		return testing;
-	}
-
-	public void addFiles() {
-
 	}
 
 	public String addToCart(HttpServletRequest req) {
