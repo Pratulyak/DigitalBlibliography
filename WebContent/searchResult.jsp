@@ -17,11 +17,26 @@
 <title>Digital Bibliography</title>
 </head>
 <body>
-	<%@ include file="header.html"%>
+	<%@ include file="pageHeader.html"%>
 
-	<form action='Frontpage' method="POST">
-		<input type="submit" value="Back to Search" /> 
-		<input type="hidden" name="action" value="home" /> 
-	</form>
+	<div class="container">
+		<form action='Frontpage' method="POST">
+			<input type="submit" value="Back to Search" /> <input type="hidden"
+				name="action" value="home" />
+		</form>
+	</div>
+	
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Year</th>
+					<th>Add to Cart</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
 </body>
 </html>

@@ -18,32 +18,19 @@
 <title>Digital Bibliography</title>
 </head>
 <body>
-	<%@ include file="header.html"%>
-	<form action="F
-		rontpage" method="post">
-		<input type="hidden" name="home"> <input type="submit"
-			name="action" value="Home">
-	</form>
+	<%@ include file="pageHeader.html"%>
 	<center>
-		<form action="control" method="POST">
-			<select name="searchType">
-				<option>Book</option>
-				<option>Journal</option>
-				<option>Date</option>
-				<option>Author</option>
-				<option>Venue</option>
-			</select>
-		</form>
-		<form action='Frontpage'>
-			<table>
-				<tr>
-					<td><input type='text'></td>
-					<td><input type='submit' value='Search'></td>
-				</tr>
-			</table>
-			<a href="AdvancedSearch.jsp">Advanced</a>
-		</form>
-	</center>
-
+		<div class = "icon-search">
+			<div class= "jumbotron">
+				<form action="Frontpage" method= "POST">
+					Title: <input type = "text" name="title"> <input type="hidden" name="action" value="title"><br><br>
+					Author: <input type= "text" name= "author"> <input type= "hidden" name="action" value="author"><br><br>
+ 					Journal: <input type= "text" name= "journal"> <input type= "hidden" name="action" value="journal"><br><br>
+ 					Year: <input type= "text" name= "year">	<input type = "hidden" name= "action" value="year"><br>
+ 					<br><input type= "submit" name="search"> <input type= "hidden" name="action" value="search">
+				</form>
+			</div>
+		</div>
+		</center>	
 </body>
 </html>

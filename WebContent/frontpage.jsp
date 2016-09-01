@@ -12,35 +12,40 @@
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Digital Bibliography</title>
 <%@ include file="header.html"%>
 </head>
 <body style="background-color: white;">
-		<form action="F
+	<div class = "container">
+	<form action="F
 		rontpage" method="post">
-			<input align="left" type="hidden" name="home"> <input
-				type="submit" name="action" value="Home">
-		</form>
-		<div align="right" class="container-fluid">
-			<img src="images/Bibliography.jpg" class="img-responsive" width="250"
-				height="250">
-		</div>
+		<input align="left" type="hidden" name="home"> <input
+			type="submit" name="action" value="Home">
+	</form>
+	</div>
+	<div align="right" class="container-fluid">
+		<img src="images/Bibliography.jpg" class="img-responsive" width="250"
+			height="250">
+	</div>
+	<div>
 		<center>
 			<form action="Frontpage" method="post">
 				<table>
 					<tr>
-						<td><input type="text" name="searchString" size="50"></td>
+						<td><input type="text" name="searchString" size="40"></td>
 						<td><input type="hidden" name="action" value="search"></td>
 						<td><input type="submit" name="search" value="Search"></td>
 					</tr>
 				</table>
-				<a href="AdvancedSearch.jsp">Advanced</a>
+				<a href="AdvancedSearch.jsp">Advanced |</a>
+				<a href="ShoppingCart.jsp">Shopping Cart</a>
 			</form>
 		</center>
 	</div>
-
+	
 	<div class="container">
 		<table class="table">
 			<thead>
@@ -48,7 +53,7 @@
 					<th>Title</th>
 					<th>Author</th>
 					<th>Year</th>
-					<th>Add to Cart</th> 
+					<th>Add to Cart</th>
 				</tr>
 			</thead>
 		</table>

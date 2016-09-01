@@ -1,15 +1,24 @@
 package edu.unsw.comp9321;
 
+import java.io.File;
 import java.io.IOException;
 //import java.io.PrintWriter;
 import java.io.PrintWriter;
-
+import java.util.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+
+
 
 //import java.util.*;
 /**
@@ -19,18 +28,31 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Frontpage")
 public class Frontpage extends HttpServlet {
 
-	// private static List<Book> archives;
+	private static List<Record> archives;
 
 	private static final long serialVersionUID = 1L;
 
 	/**
+	 * @throws ParserConfigurationException 
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Frontpage() {
+	public Frontpage() throws SAXException,IOException,ParserConfigurationException {
 		super();
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stub		
+		try {
+			File newFile = new File("dblp.xml");
+			DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
+			domFactory.setValidating(true);
+			DocumentBuilder builder = domFactory.newDocumentBuilder();
+			Document docu = builder.parse("dblp.xml");
+		} catch (SAXException | IOException e) {
+			e.printStackTrace();
+		}
 	}
-
+	
+	public void handleDoc(Document doc){
+		
+	}
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)

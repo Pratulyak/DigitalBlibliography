@@ -16,8 +16,36 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Digital Bibliography</title>
+<%@ include file="pageHeader.html"%>
 </head>
 <body>
-	<center><h1>Shopping Cart</h1></center>
+	<center>
+		<h1>Shopping Cart</h1>
+	</center>
+	<div class="container">
+		<form action="F
+		rontpage" method="post">
+			<input align="left" type="hidden" name="home"> <input
+				type="submit" name="action" value="Home">
+		</form>
+	</div>
+	<div class = "container">
+		<form action = "Frontpage">
+		<input align = "right" type= "hidden" name = "checkout">
+		<input type = "submit" name = "action" value = "Checkout">
+		</form>
+	</div>
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Year</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
 </body>
 </html>

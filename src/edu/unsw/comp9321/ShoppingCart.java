@@ -5,20 +5,20 @@ import java.util.*;
 public class ShoppingCart implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	private List<Book> items;
+	private List<Record> items;
 	public ShoppingCart(){
-		this.items = new LinkedList<Book>();
+		this.items = new LinkedList<Record>();
 	}
 	
-	public void addItem(Book b){
+	public void addItem(Record b){
 		this.items.add(b);
 	}
 
-	public List<Book> getItems() {
+	public List<Record> getItems() {
 		return items;
 	}
 
-	public void setItems(List<Book> items) {
+	public void setItems(List<Record> items) {
 		this.items = items;
 	}
 
