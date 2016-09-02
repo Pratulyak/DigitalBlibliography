@@ -16,7 +16,7 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Digital Bibliography</title>
-<%@ include file="pageHeader.html"%>
+<%@ include file="pageHeader.jsp"%>
 </head>
 <body>
 	<center>

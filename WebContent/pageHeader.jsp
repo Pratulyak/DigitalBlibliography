@@ -21,16 +21,16 @@
 
 			<div>
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="frontpage.jsp">Home</a></li>
+					<li ${param.home}><a href="frontpage.jsp">Home</a></li>
 					<li><a href="AdvancedSearch.jsp">Advanced Search</a></li>
-					<li><a href="ShoppingCart.jsp">Cart</a></li>
+					<li ${param.cart}><a href="ShoppingCart.jsp">Cart</a></li>
 				</ul>
 
 
 
 				<form action = "Frontpage" class="navbar-form navbar-right" role="search">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
+						<input type="text"  class="form-control" placeholder="Search">
 						<input type= "hidden" name="searchString">
 					</div>
 					<button type="submit" class="btn btn-default" name="action" value="search">

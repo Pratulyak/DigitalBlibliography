@@ -1,18 +1,28 @@
 package edu.unsw.comp9321;
 
-import java.util.List;
+import java.io.Serializable;
+import java.util.*;
 
-public class Record {
+
+public class Record implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String type;
-	private List<String> Authors;
+	private ArrayList<String> Authors;
 	private String Title;
 	private String publisher;
-	private int year;
-	private long pages;
-	private long isbn;
+	private String year;
+	private String pages;
+	private String isbn;
 	private String ee;
+	private String journal;
+	private String url;
+	private String number;
 	
-	public Record(String title,String publisher,int year,long pages,long isbn,String ee,String type,String author){
+	public Record(String title,String publisher,String year,String pages,String isbn,String ee,String type,ArrayList<String> author,
+			String journal,String number,String url){
 		this.Title = title;
 		this.publisher = publisher;
 		this.year = year;
@@ -20,16 +30,28 @@ public class Record {
 		this.isbn = isbn;
 		this.ee = ee;
 		this.type =type; 
-		this.addAuthors(s);
+		this.Authors = author;
+		this.journal = journal;
+		this.number = number;
+		this.url = url;
+	}
+	public String url(){
+		return this.url;
+	}
+	public String getNumber(){
+		return this.number;
+	}
+	public String getJournal(){
+		return this.journal;
 	}
 	public void addAuthors(String s){
 		this.Authors.add(s);
 	}
-	public List<String> getAuthors() {
+	public ArrayList<String> getAuthors() {
 		return Authors;
 	}
 
-	public void setAuthors(List<String> authors) {
+	public void setAuthors(ArrayList<String> authors) {
 		Authors = authors;
 	}
 
@@ -49,27 +71,27 @@ public class Record {
 		this.publisher = publisher;
 	}
 
-	public int getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
-	public long getPages() {
+	public String getPages() {
 		return pages;
 	}
 
-	public void setPages(long pages) {
+	public void setPages(String pages) {
 		this.pages = pages;
 	}
 
-	public long getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
 
-	public void setIsbn(long isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 

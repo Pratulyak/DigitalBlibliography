@@ -15,10 +15,12 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Digital Bibliography</title>
+	<jsp:include page="pageHeader.jsp">
+	<jsp:param name= "home" value= " class=\"active\""/>	
+	<jsp:param name = "cart" value=""/>
+	</jsp:include>
 </head>
 <body>
-	<%@ include file="pageHeader.html"%>
-
 	<div class="container">
 		<form action='Frontpage' method="POST">
 			<input type="submit" value="Back to Search" /> <input type="hidden"

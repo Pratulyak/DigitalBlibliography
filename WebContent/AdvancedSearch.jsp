@@ -16,9 +16,10 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <title>Digital Bibliography</title>
+<%@ include file="pageHeader.jsp"%>
 </head>
 <body>
-	<%@ include file="pageHeader.html"%>
+	
 	<center>
 		<div class = "icon-search">
 			<div class= "jumbotron">
